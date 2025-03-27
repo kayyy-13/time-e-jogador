@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edição de Times</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #28a745;
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Botão "Voltar para o Menu" */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #fff;
+            color: #28a745;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #218838;
+        }
+
+        /* Container do Formulário */
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos do Formulário */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        /* Estilo do Botão */
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Gestão de Times - Edição</h1>
+    </header>
+
+    <!-- Botão "Voltar para o Menu" no canto superior esquerdo -->
+    <a href="/" class="back-button">Voltar para o Menu</a>
+
+    <!-- Formulário de Edição de Time -->
+    <div class="form-container">
+        <h1>Edição de Time</h1>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="nome">Nome do Time</label>
+                <input type="text" id="nome" name="nome" value="Nome do Time" required>
+            </div>
+            <div class="form-group">
+                <label for="estadio">Estádio</label>
+                <input type="text" id="estadio" name="estadio" value="Estádio do Time" required>
+            </div>
+            <button type="submit">Salvar Edição</button>
+        </form>
+    </div>
+
+</body>
+</html>

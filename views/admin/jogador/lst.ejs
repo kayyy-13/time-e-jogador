@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogadores</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #28a745;
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgb(243, 240, 240);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Botão "Voltar para o Menu" */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #fff;
+            color: #28a745;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #218838;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        /* Link do "Adicionar Jogador" */
+        a {
+            text-decoration: none;
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        a:hover {
+            background-color: #218838;
+        }
+
+        /* Tabela */
+        table {
+            width: 90%;
+            max-width: 1000px;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+
+        table tr:hover {
+            background-color: #e2e6ea;
+        }
+
+        /* Estilo dos Links de Ação */
+        td a {
+            text-decoration: none;
+            color: #e2e6ea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        td a:hover {
+            color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Gestão de Jogadores</h1>
+    </header>
+
+    <!-- Botão "Voltar para o Menu" no canto superior esquerdo -->
+    <a href="/" class="back-button">Voltar para o Menu</a> <!-- Ajuste o caminho caso necessário -->
+
+    <h1>Lista de Jogadores</h1>
+    <div>
+        <a href="/admin/jogador/add">+ Adicionar Jogador</a>
+    </div>
+
+    <table>
+        <tr>
+            <th>Jogador</th>
+            <th>Altura</th>
+            <th>Peso</th>
+            <th>Posição</th>
+            <th>Opções</th>
+        </tr>
+        <tr>
+            <td>Bento Freitas</td>
+            <td>1.76 cm</td>
+            <td>85 kg</td>
+            <td>Volante</td>
+            <td>
+                <a href="/admin/jogador/edt/:id">Editar</a>
+                <a href="/admin/jogador/del/1">Excluir</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Pedro Álvares Cabral</td>
+            <td>1.80 cm</td>
+            <td>78 kg</td>
+            <td>Atacante</td>
+            <td>
+                <a href="/admin/jogador/edt/:id">Editar</a>
+                <a href="/admin/jogador/del/2">Excluir</a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

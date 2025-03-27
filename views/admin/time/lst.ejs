@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #28a745;
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Estilos do Botão "Voltar para o Menu" */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #fff;
+            color: #28a745;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #218838;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+
+        /* Link para adicionar time */
+        .add-time {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .add-time a {
+            background-color: #28a745; 
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .add-time a:hover {
+            background-color: #218838; 
+        }
+
+        /* Estilos da Tabela */
+        table {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #e9ecef;
+        }
+
+        table a {
+            color: #28a745; 
+            text-decoration: none;
+        }
+
+        table a:hover {
+            color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Gestão de Times</h1>
+    </header>
+
+    <!-- Botão "Voltar para o Menu" no canto superior esquerdo -->
+    <a href="/" class="back-button">Voltar para o Menu</a>
+
+    <!-- Título da Página -->
+    <h1>Lista de Times</h1>
+
+    <!-- Link para Adicionar Time -->
+    <div class="add-time">
+        <a href="/admin/time/add">+ Adicionar Time</a>
+    </div>
+
+    <!-- Tabela de Times -->
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Estádio</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Brasil-PE</td>
+                <td>Bento Freitas</td>
+                <td>
+                    <a href="/admin/time/edt/:id">Editar</a><br />
+                    <a href="/admin/time/del/1">Excluir</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Guarany</td>
+                <td>Estrela d'Alva</td>
+                <td>
+                    <a href="/admin/time/edt/:id">Editar</a><br />
+                    <a href="/admin/time/del/1">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
