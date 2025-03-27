@@ -15,6 +15,13 @@ app.use(express.static(__dirname + '/public'))
 
 import routes from "./routes/route.js"
 
+import mongoose from 'mongoose';
+const url = "mongodb+srv://aluno:aluno@ifsul.bs0u4so.mongodb.net/?retryWrites=true&w=majority&appName=IFsul"
+mongoose.connect(url)
+console.log(mongoose.connect)
+
 app.use(routes)
 
 app.listen(3000)
+
+

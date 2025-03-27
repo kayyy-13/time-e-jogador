@@ -1,3 +1,6 @@
+import Time from "../models/time.js";
+
+
 //time
 export async function home(req,res){
     res.render('admin/index')
@@ -6,10 +9,15 @@ export async function abreaddtime(req, res) {
     res.render('admin/time/add')
 }
 export async function addtime(req, res) {
+    await Time.create({
+        nome:req.body.nome,
+        estadio:req.body.estadio
+})
     res.redirect('/admin/time/add')
 }
 export async function listartime(req, res) {
-    res.render('admin/time/lst', '');
+    const resultado = await Time.find({}).catch(function(err){(console.log(err))}) 
+    res.render('admin/time/lst',{Times:resultado} );
 }
     export async function filtrartime(req, res) {
         res.render('admin/time/lst', '');

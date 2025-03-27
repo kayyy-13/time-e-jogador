@@ -141,28 +141,30 @@
     <table>
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Time</th>
                 <th>Estádio</th>
                 <th>Opções</th>
+                
             </tr>
         </thead>
         <tbody>
+
+        <%Times.forEach(function(Time){%>
+
             <tr>
-                <td>Brasil-PE</td>
-                <td>Bento Freitas</td>
+                 <td><%=Time.id%></td>
+                 <td><%=Time.nome%></td>
+                 <td><%=Time.estadio%></td>
+
                 <td>
                     <a href="/admin/time/edt/:id">Editar</a><br />
                     <a href="/admin/time/del/1">Excluir</a>
                 </td>
             </tr>
-            <tr>
-                <td>Guarany</td>
-                <td>Estrela d'Alva</td>
-                <td>
-                    <a href="/admin/time/edt/:id">Editar</a><br />
-                    <a href="/admin/time/del/1">Excluir</a>
-                </td>
-            </tr>
+         
+            <%})%>
+
         </tbody>
     </table>
 </body>
